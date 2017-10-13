@@ -16,3 +16,7 @@ Route::get('/',function(){
     return'welcome';
 });
 
+//設定 Route 回傳 view
+Route::get('/',function(){
+    returnview('welcome');
+});
