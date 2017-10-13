@@ -28,7 +28,8 @@ Route::get('/',function(){
 });
 */
 
-//修改 Route 接受參數//將 Route 取名為 hello.index//修改 Route 裡的路徑
+/*
+//修改 Route 裡的路徑
 Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
     returnview('welcome');
 }]);
@@ -42,7 +43,17 @@ return'Hello,'.$name;
 
 Route::get('{uri}',function(){});
 
+
 //設定 dashboard路徑的 Route
 Route::get('dashboard',function(){
     return'dashboard';
 });
+*/
+
+//設定另一個 Route 以群組包起來設定 prefix
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
+        return'admindashboard';
+    });
+});
+
