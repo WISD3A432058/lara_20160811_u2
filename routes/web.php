@@ -28,10 +28,11 @@ Route::get('/',function(){
 });
 */
 
-//修改 Route 接受參數//將 Route 取名為 hello.index
-Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    return'Hello,'.$name;
+//修改 Route 接受參數//將 Route 取名為 hello.index//修改 Route 裡的路徑
+Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
+    returnview('welcome');
 }]);
+
 
 
 //修改參數成選擇性
