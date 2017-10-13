@@ -20,3 +20,8 @@ Route::get('/',function(){
 Route::get('/',function(){
     returnview('welcome');
 });
+
+//設定 Route 跳轉頁面
+Route::get('/',function(){
+    returnredirect('welcome');
+});
