@@ -41,3 +41,8 @@ return'Hello,'.$name;
 });
 
 Route::get('{uri}',function(){});
+
+//設定 dashboard路徑的 Route
+Route::get('dashboard',function(){
+    return'dashboard';
+});
