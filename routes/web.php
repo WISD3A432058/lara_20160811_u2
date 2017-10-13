@@ -11,6 +11,7 @@
 |
 */
 
+/*
 //設定 Route 回傳字串
 Route::get('/',function(){
     return'welcome';
@@ -24,4 +25,10 @@ Route::get('/',function(){
 //設定 Route 跳轉頁面
 Route::get('/',function(){
     returnredirect('welcome');
+});
+*/
+
+//修改 Route 接受參數
+Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
 });
