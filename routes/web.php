@@ -48,7 +48,7 @@ Route::get('{uri}',function(){});
 Route::get('dashboard',function(){
     return'dashboard';
 });
-*/
+
 
 //設定另一個 Route 以群組包起來設定 prefix
 Route::group(['prefix'=>'admin'],function(){
@@ -56,4 +56,7 @@ Route::group(['prefix'=>'admin'],function(){
         return'admindashboard';
     });
 });
-
+*/
+//編輯 app/Http/web.php
+Route::get('/',['as'=>'home.index','uses'=>
+    'HomeController@index']);
